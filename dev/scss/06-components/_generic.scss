@@ -1,0 +1,54 @@
+/*Button*/
+.button{
+    font-size: 15px;
+    color: $white;
+    background: $black;
+    padding: $gap / 2.5 $gap;
+    font-weight: bold;
+    &:hover{ text-decoration: underline; }
+
+}
+/*Card*/
+.card{
+    &__item{
+        width: 100%;
+        padding-bottom: $gap * 2;
+
+        @media(min-width: $mq1){
+            width: calc(50% - 12.5px);
+            margin-right: $gap;
+            &:nth-of-type(2),
+            &:nth-of-type(4){ margin-right: 0; }
+        }
+        @media(min-width: $mq3){
+            width: 25%;
+            margin-right: $gap;
+            &:nth-of-type(2){ margin-right: $gap; }
+            &:nth-of-type(4){ margin-right: 0; }
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: .9;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: $gap;
+    }
+    &__link{
+        display: inline-block;
+        font-weight: bolder;
+        font-size: 15px;
+        line-height: 1;
+        color: $blue;
+        padding-top: $gap;
+        margin-bottom: $gap;
+        border-bottom: 2px solid transparent;
+        &:hover{ border-bottom: 2px solid $blue; }
+        &:hover span{ padding-left: 5px;}
+
+        span{ font-size: 20px; }
+    }
+}

@@ -1,0 +1,77 @@
+.header{
+    &__trigger{
+        z-index: 200;
+        @media(min-width: $mq2){ display: none; }
+    }
+    &__generic{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        @media(min-width: $mq2){
+            width: auto;
+            justify-content: flex-start;
+        }
+    }
+        &__logo{
+            width: 137px;
+            object-fit: contain;
+            padding: 0 $gap / 2;
+        }
+}
+.main-menu{
+
+    @media(min-width: $mq2){
+        display: inherit;
+        width: 100%;
+    }
+    &__list{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin-top: 55px;
+
+        z-index: 100;
+        background: $footer;
+        padding: 0 $gap / 2;
+        transform: translateX(-100%);
+        transition: .075s ease;
+
+        @media(min-width: $mq2){
+            @include flex(flex, flex-start, center, row, nowrap);
+            position: inherit;
+            margin-top: 0px;
+            padding: 0;
+            background: none;
+            transform: translateX(0%);
+        }
+    }
+    &__link{
+        display: block;
+        width: 100%;
+        line-height: 4;
+        border-bottom: 1px solid darken($footer, 5);
+        @media(min-width: $mq2){
+            width: auto;
+            line-height: normal;
+            margin: 0 $gap / 2;
+            border-bottom: 2px solid transparent;
+            &:hover{ border-bottom: 2px solid $black; }
+        }
+    }
+}
+.login-menu__icon{
+
+    width: 35px;
+    object-fit: contain;
+    margin-left: 5px;
+    &:hover{ cursor: pointer;}
+    &:nth-of-type(1){
+        order: -2;
+    }
+    &:nth-of-type(2){
+        order: -1;
+        @media(min-width: $mq2){ order: 0; }
+    }
+
+}

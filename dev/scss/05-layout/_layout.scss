@@ -1,0 +1,62 @@
+.main-container{
+    width: 100%;
+    @media(min-width: $mq3){
+        padding: 0 $gap;
+    }
+    @media(min-width: $mq4){
+        width: 100%;
+        max-width: $max-width;
+    }
+}
+.header{
+    @include flex(flex, space-between, center, row, nowrap);
+    width: 100%;
+    height: 60px;
+    @media(min-width: $mq2){
+        height: 55px;
+        @include flex(flex, flex-start, center, row, nowrap);
+
+    }
+}
+.banner,
+.update{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    @media(min-width: $mq2){
+        height: 455px;
+        @include flex(flex, flex-start, flex-start, row, nowrap);
+    }
+}
+.xbox,
+.windows{
+    width: 100%;
+    padding: $gap * 2 $gap;
+    @media(min-width: $mq1){
+        @include flex(flex, flex-start, flex-start, row, wrap);
+    }
+    @media(min-width: $mq3){
+        @include flex(flex, flex-start, flex-start, row, nowrap);
+        padding: $gap * 2 0;
+    }
+}
+.update{
+    @media(min-width: $mq2){
+        @include flex(flex, flex-end, center, row, nowrap);
+    }
+}
+.social{
+    width: 100%;
+    height: 80px;
+    @include flex(flex, flex-start, center, row, nowrap);
+    padding-left: $gap;
+    @media(min-width: $mq4){
+        padding-left: 0;
+
+    }
+}
+
+.footer{
+    @include flex(flex, center, center, column, wrap);
+    width: 100%;
+    background: $footer;
+}

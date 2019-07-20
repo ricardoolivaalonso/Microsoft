@@ -1,0 +1,23 @@
+/*Colors*/
+$white: #ffffff;
+$black: #000000;
+$blue: #0067b8;
+$gray: #616161;
+$bg: #e5e5e5;
+$footer: #f2f2f2;
+/*Gap*/
+$gap: 25px;
+$max-width: 1270px;
+/*Queries*/
+$mq1: 540px;
+$mq2: 780px;
+$mq3: 1100px;
+$mq4: 1100px;
+/*Font*/
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../fonts/SegoeUI.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}

@@ -1,0 +1,38 @@
+.footer{
+    &__generic{
+        @include flex(flex, space-between,  space-between, row, wrap);
+        width: 100%;
+        max-width: 1220px;
+        padding: $gap;
+
+
+        @media(min-width: 1220px){
+            padding: $gap 0;
+
+        }
+    }
+
+    &__list{
+        @include flex(flex, flex-start, flex-start, column, wrap);
+        width: 100%;
+        margin-bottom: $gap;
+        @media(min-width: $mq1){
+            width: calc(100% / 3);
+        }
+        @media(min-width: $mq3){
+            width: auto;
+        }
+    }
+    &__link{
+        font-size: 11px;
+        color: $gray;
+        line-height: 3;
+        &:hover{ text-decoration: underline; }
+        &--title{
+            font-size: 15px;
+            font-weight: bold;
+            &:hover{ text-decoration: none; }
+        }
+    }
+
+}

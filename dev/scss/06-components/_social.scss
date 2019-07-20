@@ -1,0 +1,20 @@
+.social{
+
+    &__title{
+        font-size: 15px;
+        color: $gray;
+        margin-right: $gap / 4;
+
+    }
+    &__icon{
+        height: 30px;
+        object-fit: contain;
+        margin: $gap / 4;
+        opacity: .9;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+}
